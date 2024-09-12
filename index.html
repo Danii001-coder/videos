@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostrar Video Oculto</title>
+    <style>
+        /* Fondo negro de la página y estilos de texto */
+        body {
+            background-color: black; /* Fondo de la página en negro */
+            color: white; /* Texto en blanco */
+            margin: 0; /* Sin márgenes */
+            font-family: Arial, sans-serif; /* Fuente general */
+            display: flex; /* Uso de Flexbox para centrar el contenido */
+            justify-content: center; /* Centra horizontalmente */
+            align-items: center; /* Centra verticalmente */
+            height: 100vh; /* Altura de la página completa */
+            flex-direction: column; /* Elementos en columna */
+        }
+
+        /* Estilos del contenedor del video */
+        #video-container {
+            display: none; /* El video está oculto inicialmente */
+            margin-top: 20px; /* Separación superior */
+        }
+
+        /* Estilos del iframe para eliminar bordes */
+        .video-frame {
+            border: none; /* Sin bordes en el iframe */
+        }
+
+        /* Estilos del botón "Ver Video" */
+        .show-button {
+            padding: 20px 40px; /* Aumenta el tamaño del botón */
+            background-color: #27ae60; /* Color de fondo del botón */
+            color: white; /* Color del texto */
+            border: none; /* Sin bordes */
+            cursor: pointer; /* Cambia el cursor a puntero al pasar el ratón */
+            font-size: 24px; /* Tamaño de fuente más grande */
+            border-radius: 10px; /* Bordes redondeados */
+            margin-top: 20px; /* Margen superior */
+        }
+
+        /* Efecto hover para el botón */
+        .show-button:hover {
+            background-color: #27ae60; /* Color más oscuro al pasar el ratón */
+        }
+    </style>
+    <script>
+        // Función para mostrar el video
+        function mostrarVideo() {
+            document.getElementById('video-container').style.display = 'block'; // Muestra el contenedor del video
+        }
+    </script>
+</head>
+<body>
+    <!-- Botón para mostrar el video -->
+    <button class="show-button" onclick="mostrarVideo()">Show Video</button>
+
+    <!-- Contenedor del video de YouTube que está oculto inicialmente -->
+    <div id="video-container">
+        <iframe class="video-frame" width="290" height="300" src="https://www.youtube.com/embed/bBgCv8b9fsA" allowfullscreen></iframe>
+    </div>
+</body>
+</html>
